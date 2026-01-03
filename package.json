@@ -1,0 +1,32 @@
+{
+  "name": "film-nuxt",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+	"start": "node .output/server/index.mjs",
+    "postinstall": "nuxt prepare",
+    "db:migrate": "knex migrate:latest",
+    "db:migrate:rollback": "knex migrate:rollback",
+    "db:seed": "knex seed:run",
+    "db:reset": "knex migrate:rollback --all && knex migrate:latest && knex seed:run"
+  },
+  "dependencies": {
+    "@pinia/nuxt": "^0.5.5",
+    "knex": "^3.1.0",
+    "nuxt": "^3.14.0",
+    "objection": "^3.1.5",
+    "pg": "^8.16.3",
+    "pinia": "^2.2.0",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^1.6.0",
+    "@types/pg": "^8.16.0",
+    "sass": "^1.80.0",
+    "ts-node": "^10.9.2"
+  }
+}
